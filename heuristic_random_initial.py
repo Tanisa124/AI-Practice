@@ -44,8 +44,8 @@ while count == 0:
     #print heuristic Search Operation
     print(f'Heuristic is {heuristic}')
     print(f'-1 point is number: {swap}')
-    print(f'First number is {rand1}')
-    print(f'Second number is {rand2}')
+    print(f'First number is {swap[rand1]}')
+    print(f'Second number is {swap[rand2]}')
     print(f'After swap: {initial_state}')
     print('---------------------------------')
     #clear swap list to make it can append again
