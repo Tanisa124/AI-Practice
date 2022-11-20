@@ -38,20 +38,20 @@ while count == 0:
     
     less = False
     while less == False:
-        swap1 = random.choice(swap)
-        swap2 = random.choice(swap)
-        index1 = initial_state.index(swap1)
-        index2 = initial_state.index(swap2)
-        if index2 > index1 and swap1 > swap2:
-            initial_state[index1] = swap2
-            initial_state[index2] = swap1
+        #random 2 number from swap list 
+        swap_items = random.choices(swap, k = 2)
+        index1 = initial_state.index(swap_items[0])
+        index2 = initial_state.index(swap_items[1])
+        if index2 > index1 and swap_items[0] > swap_items[1]:
+            initial_state[index1] = swap_items[1]
+            initial_state[index2] = swap_items[0]
             less = True
 
     #print heuristic Search Operation
     print(f'Heuristic is {heuristic}')
     print(f'-1 point is number: {swap}')
-    print(f'First number is {swap1}')
-    print(f'Second number is {swap2}')
+    print(f'First number is {swap_items[0]}')
+    print(f'Second number is {swap_items[1]}')
     print(f'After swap: {initial_state}')
     print('---------------------------------')
     #clear swap list to make it can append again
